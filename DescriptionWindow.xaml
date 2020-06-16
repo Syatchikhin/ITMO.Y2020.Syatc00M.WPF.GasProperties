@@ -1,0 +1,89 @@
+﻿<Window x:Class="WpfApp1.DescriptionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Icon="/images/logoblue_light_16x16.ico"
+        ResizeMode="NoResize"
+        Title="Справка" Height="390" Width="500">
+    <Grid>
+        <Button Content="Закрыть" HorizontalAlignment="Left" Margin="394.5,314.666,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <GroupBox Header="Работа с программой" HorizontalAlignment="Left" Height="284" Margin="20,10,0,0" VerticalAlignment="Top" Width="450">
+
+            <!--<Viewbox HorizontalAlignment="Left" Height="18" Margin="293,33,0,0" VerticalAlignment="Top" Width="20">
+                <Button>
+                    <ContentControl Template="{StaticResource OpenFolder}" />
+                </Button>
+            </Viewbox>-->
+            <!--<Viewbox HorizontalAlignment="Left" Height="20" Margin="300,32,0,0" VerticalAlignment="Top" Width="21 ">
+                <Button>
+                    <ContentControl Template="{StaticResource OpenFolder}" />
+                </Button>
+            </Viewbox>-->
+
+        </GroupBox>
+        <RichTextBox HorizontalAlignment="Left" Height="35" Margin="45,43,0,0" VerticalAlignment="Top" Width="404" IsReadOnly="True" >
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="1) Откройте заранее заполненный файл-шаблон Excel "/>
+                    <Run Text="с заполненным ранее составом газа. Воспользуйтесь иконкой:          "/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox HorizontalAlignment="Left" Height="21" Margin="45,78,0,0" VerticalAlignment="Top" Width="404" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="или используйте команду меню: &quot;Файл&quot; -&gt; &quot;Открыть&quot;."/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox HorizontalAlignment="Left" Height="23" Margin="45,113,0,0" VerticalAlignment="Top" Width="404" RenderTransformOrigin="0.505,-0.636" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="2) Выберите команду              &quot;Рассчитать&quot;. "/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox HorizontalAlignment="Left" Height="57" Margin="45,151,0,0" VerticalAlignment="Top" Width="404" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="3) Полученные результаты выводятся на экран. Этот файл с резуль- "/>
+                    <Run Text=" "/>
+                    <Run Text="татами расчета можно сохранить под другим именем. "/>
+                    <Run Text=" "/>
+                    <Run Text="Для этого воспользуйтесь командой               &quot;Сохранить как..&quot;"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox HorizontalAlignment="Left" Height="23" Margin="45,213,0,0" VerticalAlignment="Top" Width="404" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="4) Очистить содержимое формы можно при помощи команды"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <RichTextBox HorizontalAlignment="Left" Height="20" Margin="91,236,0,0" VerticalAlignment="Top" Width="358" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="&quot;Очистить&quot;"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+        <Grid  Height="20" Width="20" Margin="160,60,0,0" VerticalAlignment="Top" >
+            <ContentControl Template="{StaticResource OpenFolder}" />
+        </Grid>
+        <Grid  Height="20" Width="20" Margin="-110,110,0,0" VerticalAlignment="Top" >
+            <ContentControl Template="{StaticResource Calculator}" />
+        </Grid>
+        <Grid  Height="20" Width="20" Margin="-50,185,0,0" VerticalAlignment="Top" >
+            <ContentControl Template="{StaticResource SaveAs}" />
+        </Grid>
+        <Grid  Height="20" Width="20" Margin="-340,232,0,0" VerticalAlignment="Top" >
+            <ContentControl Template="{StaticResource CleanData}" />
+        </Grid>
+
+    </Grid>
+</Window>
